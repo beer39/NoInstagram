@@ -1,0 +1,272 @@
+/*Обнуление*/
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+/*--------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+body {
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.container {
+    max-width: 950px;
+    margin: 0 auto;
+}
+.header {
+    background-color: #fff;
+    border-bottom: 1px solid #DBDBDB;
+    &-blocks {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .header__name {
+            font-family: 'Lobster';
+            font-size: 28px;
+        }
+        .search-header {
+            padding: 5px 10px;
+            background-color: #FAFAFA;
+            border: 1px solid rgba(var(--b6a,219,219,219),1);
+            outline:none;
+            width: 200px;
+            &::placeholder{
+                font-size: 14px;
+                font-weight: 300;
+                text-align: center;
+            }
+        }
+        .header-items {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+            a {
+                color: #000;
+                &:not(:last-child) {
+                    padding-right: 20px;
+                }
+                i {
+                    font-size: 22px;
+                }
+                img {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    border: 1px solid #000;
+                    padding: 2px;
+                }
+            }
+        }
+    }
+}
+.main {
+    background-color: #FAFAFA;
+    &-btn {
+        font-size: 14px;
+        font-weight: 600;
+        font-family: "Segoe UI";
+        cursor: pointer;
+        color: #fff;
+        padding: 8px 25px;
+        background-color: #0095F6;
+        border-radius: 3px;
+        &:hover {
+            background-color: #036db7;
+        }
+        &__fas {
+            padding: 8px 12px;
+            margin: 0 16px 0 10px;
+        }
+    }
+    &-header {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid #DBDBDB;
+        &__block {
+            display: flex;
+            justify-content: flex-start;
+            padding-top: 30px;
+        }
+    }
+    &-img {
+        margin-right: 100px;
+        margin-left: 90px;
+        img {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+        }
+    }
+    &-blocks {
+        display: flex;
+        flex-direction: column;
+        margin-top: 5px;
+        &__header {
+            display: flex;
+            align-items: center;
+            h2 {
+                margin-right: 20px;
+                font-size: 28px;
+                line-height: 32px;
+                font-weight: 300;
+            }
+            .main-points {
+                cursor: pointer;
+                display: flex;
+                &__item {
+                    background-color: #000;
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                    margin: 0 1px;
+                }
+            }
+        }
+        &__subscrib {
+            display: flex;
+            font-size: 16px;
+            font-weight: 400;
+            margin: 25px 0;
+            .main-publications, .main-subscrib {
+                margin-right: 40px;
+            }
+            span {
+                font-weight: 600;
+            }
+        }
+        &__info {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.7;
+            font-size: 16px;
+            margin-bottom: 50px;
+            h3 {
+                font-weight: 600;
+                font-size: 16px;
+            }
+            .paragraf-last {
+                font-size: 12px;
+                color: #8e8e8e;
+                font-weight: 500;
+                margin-top: 10px;
+                span {
+                    color: #262626;
+                    cursor: pointer;
+                }
+            }
+        }
+        &__stories {
+            display: flex;
+            margin-bottom: 50px;
+            margin-left: 40px;
+            img {
+                width: 85px;
+                height: 85px;
+                border-radius: 50%;
+                margin-right: 25px;
+                margin-left: 25px;
+                padding: 2px;
+                border: 1px solid #DBDBDB;
+            }
+            p {
+                text-align: center;
+                margin-top: 15px;
+                font-weight: 600;
+            }
+        }
+    }
+    //фотки
+    &-photo {
+        margin-top: -21px;
+        display: flex;
+        flex-direction: column;
+        &__text {
+            display: flex;
+            justify-content: center;
+            text-transform: uppercase;
+            margin: 20px 0;
+            .photo-block {
+                cursor: pointer;
+            }
+            .photo-block:not(:last-child) {
+                margin-right: 62px;
+            }
+            h3 {
+                color: #8e8e8e;
+                font-weight: 600;
+                letter-spacing: 1px;
+                font-size: 12px;
+            }
+            .active {
+                border-top: 1px solid #000;
+                h3 {
+                    color: #262626;
+                }
+            }
+
+        }
+        &__items {
+            display: flex;
+            flex-wrap: wrap;
+            .photo-block__one {
+                margin-right: 28px;
+            }
+            .photo-block__three {
+                margin-left: 28px;
+            }
+            .photo__items {
+                margin-bottom: 28px;
+                img {
+                    width: 298px;
+                    height: 298px;
+
+                }
+            }
+        }
+    }
+}
+.footer {
+    background-color: #FAFAFA;
+    &-blocks {
+        width: 1160px;
+        padding: 13px 0 50px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-block {
+        a:not(:last-child) {
+            margin-right: 16px;
+        }
+        a {
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 600;
+            color: #00376b;
+        }
+    }
+    &-block {
+        text-align: center;
+        p {
+            color: #8e8e8e;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 12px;
+        }
+    }
+}
