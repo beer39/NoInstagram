@@ -268,7 +268,7 @@ body {
 
 @media screen and (max-device-width: 950px) {
     .container {
-        width: 740px;
+        width: 100%;
     }
     .header {
         &-blocks {
@@ -313,9 +313,6 @@ body {
     }
 }
 @media screen and (max-device-width: 640px) {
-    .container {
-        max-width: 100%;
-    }
     .header {
         &-blocks {
             justify-content: space-evenly;
@@ -410,6 +407,67 @@ body {
             }
         }
     }
-
+}
+@media screen and (max-device-width: 640px) {
+    .main {
+        &-blocks {
+            position: relative;
+            &__info {
+                text-align: center;
+            }
+            &__stories {
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-left: 0;
+                img {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-device-width: 410px) {
+    .header {
+        background-color: #fff;
+        border-bottom: 1px solid #DBDBDB;
+        &-blocks {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 15px 0;
+            .header__name {
+                font-family: 'Lobster';
+                font-size: 28px;
+            }
+            .search-header {
+                padding: 5px 10px;
+                background-color: #FAFAFA;
+                border: 1px solid rgba(var(--b6a,219,219,219),1);
+                outline:none;
+                width: 200px;
+                &::placeholder{
+                    font-size: 14px;
+                    font-weight: 300;
+                    text-align: center;
+                }
+            }
+            .header-items {
+                a {
+                    &:not(:last-child) {
+                        padding-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+    .main {
+        &-blocks {
+            &__subscrib {
+                margin: 15px 0;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    }
 }
 
