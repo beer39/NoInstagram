@@ -224,13 +224,61 @@ body {
             flex-wrap: wrap;
             justify-content: space-between;
             align-content: space-around;
+            .item {
+                width: 298px;
+                height: 298px;
+                background-repeat     : no-repeat;
+                background-size       : cover;
+                background-position-x : 50%;
+                background-position-y : 50%;
+            }
+            .item-1 {
+                background-image: url(../img/1.jpg);
+            }
+            .item-2 {
+                background-image: url(../img/2.jpg);
+            }
+            .item-3 {
+                background-image: url(../img/3.jpg);
+            }
+            .item-4 {
+                background-image: url(../img/4.jpg);
+            }
+            .item-5 {
+                background-image: url(../img/5.jpg);
+            }
+            .item-6 {
+                background-image: url(../img/6.jpg);
+            }
+            .item-7 {
+                background-image: url(../img/7.jpg);
+            }
+            .item-8 {
+                background-image: url(../img/8.jpg);
+            }
+            .item-9 {
+                background-image: url(../img/9.jpg);
+            }
+            .item-10 {
+                background-image: url(../img/10.jpg);
+            }
+            .item-11 {
+                background-image: url(../img/11.jpg);
+            }
+            .item-12 {
+                background-image: url(../img/12.jpg);
+            }
+            .item-13 {
+                background-image: url(../img/13.jpg);
+            }
+            .item-14 {
+                background-image: url(../img/14.jpg);
+            }
+            .item-15 {
+                background-image: url(../img/15.jpg);
+            }
             .photo__items {
                 margin-bottom: 30px;
-                img {
-                    width: 298px;
-                    height: 298px;
-
-                }
             }
         }
     }
@@ -424,6 +472,14 @@ body {
                 }
             }
         }
+        &-photo {
+            &__items {
+                .item {
+                    width: 100%;
+                    height: 80vh;
+                }
+            }
+        }
     }
 }
 @media screen and (max-device-width: 410px) {
@@ -466,6 +522,14 @@ body {
                 margin: 15px 0;
                 flex-wrap: wrap;
                 justify-content: center;
+            }
+        }
+        &-photo {
+            &__items {
+                .item {
+                    width: 100%;
+                    height: 60vh;
+                }
             }
         }
     }
