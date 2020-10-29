@@ -224,6 +224,19 @@ body {
             flex-wrap: wrap;
             justify-content: space-between;
             align-content: space-around;
+            p {
+                position: relative;
+                font-size: 18px;
+                color: rgb(0,0,0,.1);
+                text-align: center;
+                font-weight: 500;
+                top: 100%;
+                transform: translateY(-100%);
+                background-color: rgba(124,124,124,.1);
+                padding: 10px 0;
+                transition: .7s;
+                visibility: hidden;
+            }
             .item {
                 width: 298px;
                 height: 298px;
@@ -279,6 +292,11 @@ body {
             }
             .photo__items {
                 margin-bottom: 30px;
+            }
+            .photo__items:hover p {
+                background-color: rgba(124,124,124,.6);
+                color: rgb(0,0,0,1);
+                visibility: visible;
             }
         }
     }
@@ -401,8 +419,12 @@ body {
                 text-align: center;
             }
             &__stories {
-                justify-content: space-around;
+                flex-wrap: wrap;
+                justify-content: center;
                 margin-left: 0;
+                img {
+                    margin-top: 20px;
+                }
             }
         }
         //фотки
@@ -433,13 +455,25 @@ body {
 
             }
             &__items {
+                .item {
+                    width: 100%;
+                    height: 80vh;
+                }
+                p {
+                    position: relative;
+                    font-size: 18px;
+                    color: #000;
+                    text-align: center;
+                    font-weight: 500;
+                    top: 100%;
+                    transform: translateY(0);
+                    background-color: rgba(124,124,124,.4);
+                    margin-bottom: 20px;
+                    visibility: visible;
+                }
                 justify-content: center;
                 .photo__items {
-                    margin-bottom: 30px;
-                    img {
-                        width: 100%;
-                        height: 100%;
-                    }
+                    margin-bottom: 10%;
                 }
             }
         }
@@ -456,32 +490,7 @@ body {
         }
     }
 }
-@media screen and (max-device-width: 640px) {
-    .main {
-        &-blocks {
-            position: relative;
-            &__info {
-                text-align: center;
-            }
-            &__stories {
-                flex-wrap: wrap;
-                justify-content: center;
-                margin-left: 0;
-                img {
-                    margin-top: 20px;
-                }
-            }
-        }
-        &-photo {
-            &__items {
-                .item {
-                    width: 100%;
-                    height: 80vh;
-                }
-            }
-        }
-    }
-}
+
 @media screen and (max-device-width: 410px) {
     .header {
         background-color: #fff;

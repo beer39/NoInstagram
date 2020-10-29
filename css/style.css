@@ -282,6 +282,19 @@ body {
 		justify-content: space-between;
 		align-content: space-around;
 }
+.main-photo__items p {
+		position: relative;
+		font-size: 18px;
+		color: rgba(0, 0, 0, 0.1);
+		text-align: center;
+		font-weight: 500;
+		top: 100%;
+		transform: translateY(-100%);
+		background-color: rgba(124, 124, 124, 0.1);
+		padding: 10px 0;
+		transition: 0.7s;
+		visibility: hidden;
+}
 .main-photo__items .item {
 		width: 298px;
 		height: 298px;
@@ -337,6 +350,11 @@ body {
 }
 .main-photo__items .photo__items {
 		margin-bottom: 30px;
+}
+.main-photo__items .photo__items:hover p {
+		background-color: rgba(124, 124, 124, 0.6);
+		color: black;
+		visibility: visible;
 }
 
 .footer {
@@ -436,8 +454,12 @@ body {
 				text-align: center;
 		}
 		.main-blocks__stories {
-				justify-content: space-around;
+				flex-wrap: wrap;
+				justify-content: center;
 				margin-left: 0;
+		}
+		.main-blocks__stories img {
+				margin-top: 20px;
 		}
 		.main-photo__text {
 				display: flex;
@@ -466,12 +488,24 @@ body {
 		.main-photo__items {
 				justify-content: center;
 		}
-		.main-photo__items .photo__items {
-				margin-bottom: 30px;
-		}
-		.main-photo__items .photo__items img {
+		.main-photo__items .item {
 				width: 100%;
-				height: 100%;
+				height: 80vh;
+		}
+		.main-photo__items p {
+				position: relative;
+				font-size: 18px;
+				color: #000;
+				text-align: center;
+				font-weight: 500;
+				top: 100%;
+				transform: translateY(0);
+				background-color: rgba(124, 124, 124, 0.4);
+				margin-bottom: 20px;
+				visibility: visible;
+		}
+		.main-photo__items .photo__items {
+				margin-bottom: 10%;
 		}
 
 		.footer-blocks {
@@ -480,26 +514,6 @@ body {
 		}
 		.footer-block p {
 				margin-top: 20px;
-		}
-}
-@media screen and (max-device-width: 640px) {
-		.main-blocks {
-				position: relative;
-		}
-		.main-blocks__info {
-				text-align: center;
-		}
-		.main-blocks__stories {
-				flex-wrap: wrap;
-				justify-content: center;
-				margin-left: 0;
-		}
-		.main-blocks__stories img {
-				margin-top: 20px;
-		}
-		.main-photo__items .item {
-				width: 100%;
-				height: 80vh;
 		}
 }
 @media screen and (max-device-width: 410px) {
