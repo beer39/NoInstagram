@@ -343,13 +343,13 @@ body {
     .header {
         &-blocks {
             justify-content: space-evenly;
-                a {
-                    &:not(:last-child) {
-                        padding-right: 10px;
-                    }
+            a {
+                &:not(:last-child) {
+                    padding-right: 10px;
                 }
             }
         }
+    }
     .main {
         &-header {
             &__block {
@@ -498,33 +498,26 @@ body {
 
 @media screen and (max-device-width: 410px) {
     .header {
-        background-color: #fff;
-        border-bottom: 1px solid #DBDBDB;
         &-blocks {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
             margin: 15px 0;
             .header__name {
-                font-family: 'Lobster';
-                font-size: 28px;
-            }
-            .search-header {
-                padding: 5px 10px;
-                background-color: #FAFAFA;
-                border: 1px solid rgba(var(--b6a,219,219,219),1);
-                outline:none;
-                width: 200px;
-                &::placeholder{
-                    font-size: 14px;
-                    font-weight: 300;
-                    text-align: center;
-                }
+                width: 100%;
+                text-align: center;
+                margin-bottom: 10px;
             }
             .header-items {
                 a {
+                    i {
+                        font-size: 30px;
+                    }
                     &:not(:last-child) {
-                        padding-right: 5px;
+                        padding-right: 15px;
+                    }
+                    img {
+                        width: 35px;
+                        height: 35px;
                     }
                 }
             }
@@ -548,4 +541,3 @@ body {
         }
     }
 }
-
