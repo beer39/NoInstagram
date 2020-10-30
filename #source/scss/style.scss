@@ -181,6 +181,9 @@ body {
                 margin-left: 25px;
                 padding: 2px;
                 border: 1px solid #DBDBDB;
+                &:hover {
+                    border: 1px solid #675858;
+                }
             }
             p {
                 text-align: center;
@@ -221,21 +224,22 @@ body {
         }
         &__items {
             display: flex;
-            flex-wrap: wrap;
             justify-content: space-between;
-            align-content: space-around;
+            flex-wrap: wrap;
+            position: relative;
             p {
-                position: relative;
                 font-size: 18px;
                 color: rgb(0,0,0,.1);
                 text-align: center;
-                font-weight: 500;
-                top: 100%;
+                position: absolute;
                 transform: translateY(-100%);
+                width: 298px;
+                font-weight: 500;
                 background-color: rgba(124,124,124,.1);
                 padding: 10px 0;
                 transition: .7s;
                 visibility: hidden;
+
             }
             .item {
                 width: 298px;
@@ -455,25 +459,26 @@ body {
 
             }
             &__items {
+
+                p {
+                    font-size: 18px;
+                    color: rgb(0,0,0,1);
+                    text-align: center;
+                    position: absolute;
+                    width: 100%;
+                    background-color: rgba(124,124,124,.6);
+                    padding: 10px 0;
+                    transition: 0s;
+                    visibility: visible;
+
+                }
                 .item {
                     width: 100%;
-                    height: 80vh;
+                    height: 70vh;
                 }
-                p {
-                    position: relative;
-                    font-size: 18px;
-                    color: #000;
-                    text-align: center;
-                    font-weight: 500;
-                    top: 100%;
-                    transform: translateY(0);
-                    background-color: rgba(124,124,124,.4);
-                    margin-bottom: 20px;
-                    visibility: visible;
-                }
-                justify-content: center;
                 .photo__items {
-                    margin-bottom: 10%;
+                    width: 100%;
+                    padding-bottom: 0px;
                 }
             }
         }
